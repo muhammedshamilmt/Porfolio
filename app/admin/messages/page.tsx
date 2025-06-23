@@ -39,71 +39,31 @@ export default function MessagesPage() {
   const [selectedMessage, setSelectedMessage] = useState<Message | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
-  // Mock data - in a real app, this would come from a database
   useEffect(() => {
-    const mockMessages: Message[] = [
-      {
-        id: "1",
-        name: "John Smith",
-        email: "john.smith@example.com",
-        subject: "Website Development Inquiry",
-        message:
-          "Hi, I'm interested in having a new website built for my business. Could we discuss the project requirements and timeline?",
-        timestamp: "2024-01-15T10:30:00Z",
-        status: "new",
-        priority: "high",
-      },
-      {
-        id: "2",
-        name: "Sarah Johnson",
-        email: "sarah.j@company.com",
-        subject: "E-commerce Platform",
-        message:
-          "We need an e-commerce solution for our retail business. Looking for something modern with payment integration.",
-        timestamp: "2024-01-14T14:20:00Z",
-        status: "read",
-        priority: "medium",
-      },
-      {
-        id: "3",
-        name: "Mike Chen",
-        email: "mike.chen@startup.io",
-        subject: "Portfolio Review",
-        message: "Love your work! Would you be available for a consultation about our startup's landing page?",
-        timestamp: "2024-01-13T09:15:00Z",
-        status: "replied",
-        priority: "low",
-      },
-      {
-        id: "4",
-        name: "Emily Davis",
-        email: "emily.davis@nonprofit.org",
-        subject: "Non-profit Website",
-        message:
-          "We're a non-profit organization looking for a website redesign. We have a limited budget but need something professional.",
-        timestamp: "2024-01-12T16:45:00Z",
-        status: "read",
-        priority: "medium",
-      },
-      {
-        id: "5",
-        name: "Alex Rodriguez",
-        email: "alex.r@restaurant.com",
-        subject: "Restaurant Website with Online Ordering",
-        message:
-          "Need a website for our restaurant with online ordering capabilities. Interested in your restaurant project in the portfolio.",
-        timestamp: "2024-01-11T11:30:00Z",
-        status: "new",
-        priority: "high",
-      },
-    ]
-
-    // Simulate loading
-    setTimeout(() => {
-      setMessages(mockMessages)
-      setFilteredMessages(mockMessages)
+    async function fetchMessages() {
+      setIsLoading(true)
+      try {
+        const res = await fetch('/api/contact')
+        const data = await res.json()
+        if (Array.isArray(data.messages)) {
+          // Map MongoDB _id to id for compatibility
+          const messages = data.messages.map((msg: any) => ({
+            ...msg,
+            id: msg._id || msg.id,
+          }))
+          setMessages(messages)
+          setFilteredMessages(messages)
+        } else {
+          setMessages([])
+          setFilteredMessages([])
+        }
+      } catch (err) {
+        setMessages([])
+        setFilteredMessages([])
+      }
       setIsLoading(false)
-    }, 1000)
+    }
+    fetchMessages()
   }, [])
 
   // Filter messages based on search and status

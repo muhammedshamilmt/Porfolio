@@ -47,56 +47,42 @@ export function Contact() {
     setSubmitStatus({ type: null, message: "" })
 
     try {
-      // Store message in localStorage for the admin panel
-      const message = {
-        id: Date.now().toString(),
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        timestamp: new Date().toISOString(),
-        status: "new",
-        priority: "medium",
+      // Send message to API for DB storage
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      let result
+      try {
+        result = await response.json()
+      } catch (err: any) {
+        // Don't try to read response.text() after json() fails, as the body is already consumed
+        throw new Error("Failed to parse server response. Please try again later.")
       }
-
-      // Get existing messages from localStorage
-      const existingMessages = JSON.parse(localStorage.getItem("portfolioMessages") || "[]")
-      const updatedMessages = [message, ...existingMessages]
-      localStorage.setItem("portfolioMessages", JSON.stringify(updatedMessages))
+      if (!response.ok) {
+        throw new Error(result?.error || "Failed to submit message.")
+      }
 
       // Simple mailto fallback solution that always works
       const subject = encodeURIComponent(`Portfolio Contact: ${formData.subject}`)
-      const body = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
-Subject: ${formData.subject}
-
-Message:
-${formData.message}
-
----
-Sent from your portfolio contact form
-      `)
-
+      const body = encodeURIComponent(`\nName: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}\n\n---\nSent from your portfolio contact form\n      `)
       const mailtoLink = `mailto:shaz80170@gmail.com?subject=${subject}&body=${body}`
-
-      // Open default email client
       window.open(mailtoLink, "_blank")
 
       setSubmitStatus({
         type: "success",
-        message: "Your default email client should open with the message pre-filled. Please send it from there!",
+        message: "Your message was stored and your default email client should open with the message pre-filled. Please send it from there!",
       })
 
-      // Reset form after a delay
       setTimeout(() => {
         setFormData({ name: "", email: "", subject: "", message: "" })
       }, 2000)
-    } catch (error) {
+    } catch (error: any) {
       console.error("Form submission error:", error)
       setSubmitStatus({
         type: "error",
-        message: "Unable to open email client. Please copy the message and send it manually to shaz80170@gmail.com",
+        message: error.message || "Unable to submit message. Please try again later or email shaz80170@gmail.com",
       })
     } finally {
       setIsSubmitting(false)

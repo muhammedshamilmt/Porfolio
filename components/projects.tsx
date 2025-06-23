@@ -51,65 +51,66 @@ export function Projects() {
     {
       id: 1,
       title: "Canteen-tracker-app",
-      description: "A full-featured online store with payment processing, inventory management, and admin dashboard.",
+      description: " A smart, real-time food ordering and inventory tracking solution designed to streamline canteen operations.",
       longDescription:
-        "A comprehensive e-commerce solution built with modern technologies. Features include user authentication, product catalog, shopping cart, secure payment processing with Stripe, order management, inventory tracking, and a complete admin dashboard for store management.",
-      image: "/gallary1.png",
+        "Canteen Tracker App is a modern, mobile-first solution aimed at revolutionizing the way canteens, cafeterias, and food stalls manage daily operations. Whether it's a school, college, office, or hospital cafeteria, this app helps bridge the gap between customers and the canteen management system through digital efficiency and transparency.",
+      image: "https://ik.imagekit.io/1tgcghv/portfolio/%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B5%BB%E0%B4%B7%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D%202025-06-23%20175602.png?updatedAt=1750681638419",
       tech: ["Next.js", "TypeScript", "razorpay", "Tailwind CSS", "mongodb", "Prisma"],
       liveUrl: "https://canteen.aicedu.in/",
-      githubUrl: "https://github.com/yourusername/ecommerce",
+      githubUrl: "https://github.com/muhammedshamilmt/canteen",
       featured: true,
       category: "Full Stack",
       duration: "1 month",
       team: "Solo Project",
       highlights: [
-        "Integrated Razorpay payment processing",
+        "Integrated Resend api processing",
         "Real-time inventory management",
         "Responsive design for all devices",
         "SEO optimized product pages",
         "Admin dashboard with analytics",
       ],
       challenges: [
-        "Implementing secure payment processing",
+        "Implementing secure email sending processing",
         "Optimizing database queries for large product catalogs",
         "Creating a scalable admin interface",
       ],
       gallery: [
-        "/gallary1.png?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
+        "https://ik.imagekit.io/1tgcghv/portfolio/%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B5%BB%E0%B4%B7%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D%202025-06-23%20175602.png?updatedAt=1750681638419",
+        "https://ik.imagekit.io/1tgcghv/portfolio/%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B5%BB%E0%B4%B7%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D%202025-06-23%20175613.png?updatedAt=1750681637898",
+        "https://ik.imagekit.io/1tgcghv/portfolio/%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B5%BB%E0%B4%B7%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D%202025-06-23%20175631.png?updatedAt=1750681637797",
+        "https://ik.imagekit.io/1tgcghv/portfolio/%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B5%BB%E0%B4%B7%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D%202025-06-23%20175638.png?updatedAt=1750681637433",
       ],
     },
     {
       id: 2,
-      title: "Restaurant Website",
-      description: "Modern restaurant website with online ordering system and table reservation functionality.",
+      title: "National Quranic Seminar",
+      description: "An impactful seminar series uniting scholars, students, and enthusiasts for in-depth discussions, lectures, and workshops centered around the Quran and its teachings.",
       longDescription:
-        "A complete restaurant website solution featuring online menu browsing, food ordering system, table reservation booking, customer reviews, and restaurant management dashboard. Built with focus on user experience and mobile responsiveness.",
-      image: "/placeholder.svg?height=300&width=400",
-      tech: ["React", "Node.js", "MongoDB", "Express", "Socket.io"],
-      liveUrl: "https://example-restaurant.com",
-      githubUrl: "https://github.com/yourusername/restaurant",
+        "The National Quranic Seminar is a comprehensive platform dedicated to fostering meaningful engagement with the Holy Quran. The seminar features thematic sessions, expert lectures, interactive workshops, and Q&A panels, providing attendees with opportunities to deepen their understanding of Quranic sciences, interpretation, and contemporary relevance. Designed for participants from diverse backgrounds, the event aims to inspire a lifelong connection with the Quran while promoting scholarly dialogue and community building. The seminar is accessible both in-person and online, ensuring broad participation and lasting impact.",
+      image: "https://ik.imagekit.io/1tgcghv/portfolio/%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B5%BB%E0%B4%B7%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D%202025-06-23%20174451.png?updatedAt=1750680985733",
+      tech: ["React", "Node.js", "MongoDB", "Express","vite"],
+      liveUrl: "https://national-quranic-seminar.vercel.app/",
+      githubUrl: "https://github.com/muhammedshamilmt/National-Quranic-Seminar",
       featured: true,
       category: "Full Stack",
       duration: "2 months",
       team: "2 Developers",
       highlights: [
-        "Real-time order tracking",
-        "Table reservation system",
-        "Customer review system",
-        "Mobile-first design",
-        "Restaurant management dashboard",
+        "National-level event fostering deeper understanding of the Quran",
+        "Brings together renowned scholars, students, and Quran enthusiasts.",
+        "Features lectures, workshops, and interactive Q&A sessions.",
+        "Promotes community building and scholarly networking.",
+        "Accessible both in-person and online for wider participation.",
       ],
       challenges: [
-        "Real-time order status updates",
-        "Managing table availability",
-        "Optimizing for mobile ordering experience",
+        "Ensuring diverse and inclusive participation from different regions.",
+        "Managing logistics for both onsite and virtual attendees.",
+        "Handling technical issues during live streaming or online sessions.",
       ],
       gallery: [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
+        "https://ik.imagekit.io/1tgcghv/portfolio/%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B5%BB%E0%B4%B7%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D%202025-06-23%20174451.png?updatedAt=1750680985733",
+        "https://ik.imagekit.io/1tgcghv/portfolio/%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B5%BB%E0%B4%B7%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D%202025-06-23%20174357.png?updatedAt=1750680985714",
+        "https://ik.imagekit.io/1tgcghv/portfolio/%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%80%E0%B5%BB%E0%B4%B7%E0%B5%8B%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D%202025-06-23%20174422.png?updatedAt=1750680985051",
       ],
     },
     {
@@ -374,7 +375,7 @@ export function Projects() {
               <img
                 src={selectedProject.image || "/placeholder.svg"}
                 alt={selectedProject.title}
-                className="w-full h-[8rem] object-cover rounded-t-3xl"
+                className="w-full h-[10rem] object-cover rounded-t-3xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent rounded-t-3xl"></div>
 
