@@ -375,7 +375,7 @@ export function Projects() {
               <img
                 src={selectedProject.image || "/placeholder.svg"}
                 alt={selectedProject.title}
-                className="w-full h-[10rem] object-cover rounded-t-3xl"
+                className="w-full h-[19rem] object-cover rounded-t-3xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent rounded-t-3xl"></div>
 

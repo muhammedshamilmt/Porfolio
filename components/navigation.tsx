@@ -33,11 +33,11 @@ export function Navigation() {
   }
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-black/20 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20" : "bg-transparent"
-      }`}
-    >
+    // <nav
+    //   className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+    //     scrolled ? "bg-black/20 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20" : "bg-transparent"
+    //   }`}
+    // >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center items-center py-4">
           {/* Desktop Navigation */}
@@ -101,8 +101,8 @@ export function Navigation() {
         )}
       </div>
 
-      {/* Glassmorphism overlay for better effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 via-transparent to-purple-400/5 pointer-events-none"></div>
-    </nav>
+    //   {/* Glassmorphism overlay for better effect */}
+    //   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 via-transparent to-purple-400/5 pointer-events-none"></div>
+    // </nav>
   )
 }

@@ -6,6 +6,8 @@ import { Projects } from "@/components/projects"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { Timeline } from "@/components/timeline"
+import TechStacks from "@/components/tech-stacks"
+import Gallery from "@/components/gallery"
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <Timeline />
       <Services />
       <Projects />
+      <Gallery />
+      <TechStacks />
       <Contact />
       <Footer />
     </main>
