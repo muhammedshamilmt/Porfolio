@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Muhammed Shamil MT",
-  description: "Professional Freelance website developer in palakkad.",
+  description: "Muhammed Shamil MT - Professional Freelance website developer in palakkad.",
   icons: [
     { rel: "icon", url: "/favicon.ico"},
   ],
