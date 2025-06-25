@@ -7,7 +7,7 @@ import ClientLayout from "@/components/client-layout"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Your Portfolio - Website Developer",
+  title: "Muhammed Shamil MT",
   description: "Professional website developer portfolio showcasing modern web development projects and skills.",
   icons: [
     { rel: "icon", url: "/favicon.ico"},

@@ -26,7 +26,7 @@ export default function LoadingScreen({ onFinish }: { onFinish?: () => void }) {
           <span className="block w-16 h-16 border-4 border-cyan-400 border-t-purple-500 border-b-purple-500 border-r-cyan-400 rounded-full animate-spin" />
         </div>
         <div className="text-5xl md:text-7xl font-extrabold text-white animate-pulse drop-shadow-lg">
-          <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Shamil</span>
+          <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Shamil MT</span>
         </div>
         <div className="text-lg md:text-2xl text-white/80 tracking-wider animate-fade-in-up">
           Welcome to my portfolio
@@ -41,7 +41,7 @@ export default function LoadingScreen({ onFinish }: { onFinish?: () => void }) {
           100% { opacity: 1; transform: translateY(0); }
         }
         .animate-fade-in-up {
-          animation: fade-in-up 8s cubic-bezier(.4,0,.2,1) 5s both;
+          animation: fade-in-up 8s cubic-bezier(.4,0,.2,1) 15s both;
         }
         @keyframes gradient-loading {
           0% { margin-left: 0%; width: 33%; }

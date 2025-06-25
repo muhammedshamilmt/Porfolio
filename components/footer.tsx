@@ -26,7 +26,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-center md:text-left">
             <div className="text-2xl font-bold text-white mb-2">
-              <span className="text-cyan-400">Your</span>Portfolio
+              <span className="text-cyan-400">Muhammed Shamil</span>
             </div>
             <p className="text-gray-400 flex items-center justify-center md:justify-start">
               Made with <Heart className="mx-1 text-red-400" size={16} /> and lots of coffee
@@ -49,7 +49,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-center md:text-left">
-            &copy; 2024 Your Name. All rights reserved. | Built with Next.js & Tailwind CSS
+            &copy; {new Date().getFullYear()} Muhammed Shamil MT. All rights reserved.
           </p>
 
           <Button
