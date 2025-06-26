@@ -18,17 +18,6 @@ interface TimelineItem {
   color: string
 }
 
-const NUM_PARTICLES = 20;
-
-function getRandomParticles() {
-  return Array.from({ length: NUM_PARTICLES }).map(() => ({
-    left: `${Math.random() * 100}%`,
-    top: `${Math.random() * 100}%`,
-    animationDelay: `${Math.random() * 10}s`,
-    animationDuration: `${8 + Math.random() * 4}s`,
-  }));
-}
-
 export function Timeline() {
   const [isVisible, setIsVisible] = useState(false)
   const [visibleItems, setVisibleItems] = useState<number[]>([])
@@ -36,7 +25,6 @@ export function Timeline() {
   const sectionRef = useRef<HTMLElement>(null)
   const itemRefs = useRef<(HTMLDivElement | null)[]>([])
   const timelineRef = useRef<HTMLDivElement>(null)
-  const [particles, setParticles] = useState([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -96,10 +84,6 @@ export function Timeline() {
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  useEffect(() => {
-    setParticles(getRandomParticles());
-  }, []);
 
   const timelineData: TimelineItem[] = [
     {
@@ -228,11 +212,16 @@ export function Timeline() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-400/2 rounded-full blur-3xl animate-pulse-loop"></div>
 
         {/* Animated Particles */}
-        {particles.map((style, i) => (
+        {Array.from({ length: 20 }).map((_, i) => (
           <div
             key={i}
             className="absolute w-2 h-2 bg-cyan-400/30 rounded-full animate-particle-float"
-            style={style}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${8 + Math.random() * 4}s`,
+            }}
           />
         ))}
 
